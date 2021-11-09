@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/blop.wav-1d943f4903343ad7e27f66d624ce509b.sample"
+
+[deps]
+
+source_file="res://Assets/sounds/blop.wav"
+dest_files=[ "res://.import/blop.wav-1d943f4903343ad7e27f66d624ce509b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

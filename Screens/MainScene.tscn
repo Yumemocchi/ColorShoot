@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Screens/L_Life.gd" type="Script" id=1]
+[ext_resource path="res://Screens/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Screens/L_Score.gd" type="Script" id=3]
+[ext_resource path="res://Assets/background.png" type="Texture" id=4]
+[ext_resource path="res://Environment/Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Environment/Starfield.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Cubes/Cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Screens/MainScene.gd" type="Script" id=8]
+[ext_resource path="res://Assets/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 9 )
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="S_Background" type="Sprite" parent="."]
+position = Vector2( 400.54, 461.339 )
+scale = Vector2( 1.15614, 1.11479 )
+texture = ExtResource( 4 )
+
+[node name="Starfield" parent="." instance=ExtResource( 6 )]
+position = Vector2( 400, 450 )
+
+[node name="Cube" parent="." instance=ExtResource( 7 )]
+position = Vector2( 386.681, 850 )
+
+[node name="Wall" parent="." instance=ExtResource( 5 )]
+
+[node name="L_Score" type="Label" parent="."]
+margin_left = 576.0
+margin_right = 800.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Score %s"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L_Life" type="Label" parent="."]
+margin_left = 8.0
+margin_right = 199.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 2 )
+text = "Lifes"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 400, 449.952 )
+current = true
+script = ExtResource( 2 )
+
+[node name="ShakeTimer" type="Timer" parent="Camera2D"]
+
+[connection signal="timeout" from="Camera2D/ShakeTimer" to="Camera2D" method="_on_Timer_timeout"]

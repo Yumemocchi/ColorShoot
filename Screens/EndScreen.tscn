@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Screens/EndScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 3
+outline_color = Color( 0.243137, 0.235294, 0.235294, 1 )
+extra_spacing_space = 5
+font_data = ExtResource( 2 )
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 800.0
+margin_bottom = 900.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -326.5
+margin_top = -240.5
+margin_right = 326.5
+margin_bottom = 240.5
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER
+Your score %s
+
+You died !
+Insert a coin
+
+or just press R
+but consider giving me a coin
+please
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
