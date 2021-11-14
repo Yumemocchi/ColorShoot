@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Screens/L_Life.gd" type="Script" id=1]
 [ext_resource path="res://Screens/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Screens/L_Score.gd" type="Script" id=3]
-[ext_resource path="res://Assets/background.png" type="Texture" id=4]
 [ext_resource path="res://Environment/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Environment/Starfield.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ship/Ship.tscn" type="PackedScene" id=7]
@@ -22,10 +21,15 @@ font_data = ExtResource( 9 )
 position = Vector2( 1, 0 )
 script = ExtResource( 8 )
 
-[node name="S_Background" type="Sprite" parent="."]
-position = Vector2( 400.54, 461.339 )
-scale = Vector2( 1.15614, 1.11479 )
-texture = ExtResource( 4 )
+[node name="S_Background" type="ColorRect" parent="."]
+margin_left = -115.0
+margin_top = -101.0
+margin_right = 911.0
+margin_bottom = 1016.0
+color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Starfield" parent="." instance=ExtResource( 6 )]
 position = Vector2( 400, 450 )
@@ -34,6 +38,7 @@ position = Vector2( 400, 450 )
 position = Vector2( 386.681, 850 )
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="L_Score" type="Label" parent="."]
 margin_left = 576.0

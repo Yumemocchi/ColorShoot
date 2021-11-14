@@ -27,7 +27,7 @@ func pop_brick(x:int, place:int):
 	add_child(brick)
 
 func check_fire():
-	if (Input.is_action_pressed("ui_accept") and can_fire == true and Global.is_changing_ship == false):
+	if (Input.is_action_pressed("ui_accept") and can_fire == true):
 		can_fire = false		
 		var bullet = OBJ_BULLET.instance()
 		bullet.change_color_bullet(Global.current_color)
