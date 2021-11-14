@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const OBJ_BULLET: Object = preload("res://Cubes/Bullet.tscn")
+const OBJ_BULLET: Object = preload("res://Ship/Bullet.tscn")
 const OBJ_BRICK: Object = preload("res://Objects/Brick.tscn")
 const SIZE_BRICK = 100
 
@@ -27,11 +27,11 @@ func pop_brick(x:int, place:int):
 	add_child(brick)
 
 func check_fire():
-	if (Input.is_action_pressed("ui_accept") and can_fire == true):
+	if (Input.is_action_pressed("ui_accept") and can_fire == true and Global.is_changing_ship == false):
 		can_fire = false		
 		var bullet = OBJ_BULLET.instance()
 		bullet.change_color_bullet(Global.current_color)
-		bullet.position = Vector2($Cube.position.x,$Cube.position.y-20)
+		bullet.position = Vector2($Ship.position.x,$Ship.position.y-20)
 		add_child_below_node($S_Background,bullet)
 		yield(get_tree().create_timer(0.2), "timeout")
 		can_fire = true

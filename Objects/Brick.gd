@@ -11,12 +11,10 @@ var color_brick: int = 3
 func _ready():
 	rng.randomize()
 	print(speed)
-	if Global.score < 1000:
+	if Global.score < 10000:
 		speed = rng.randf_range(50.0, 100.0)
-	elif Global.score > 1000 and Global.score < 3000:
+	elif Global.score >= 10000:
 		speed = rng.randf_range(150.0, 200.0)
-	elif Global.score >= 3000:
-		speed = rng.randf_range(250.0, 300.0)
 	color_brick = rng.randf_range(0, 4)
 	$AnimatedSprite.stop()
 	$AnimatedSprite.frame = color_brick

@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Screens/StartScreen.gd" type="Script" id=2]
-[ext_resource path="res://Assets/brave_RGmFEGHbod.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=2]
 size = 90
@@ -47,10 +46,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 82.6561
-margin_top = 662.554
-margin_right = 679.656
-margin_bottom = 754.554
+margin_left = 90.0
+margin_top = 430.0
+margin_right = 687.0
+margin_bottom = 522.0
 custom_fonts/font = SubResource( 2 )
 text = "Press ENTER !"
 __meta__ = {
@@ -62,16 +61,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -317.344
-margin_top = -165.206
-margin_right = 298.656
-margin_bottom = 139.794
+margin_left = -310.0
+margin_top = -235.0
+margin_right = 306.0
+margin_bottom = -91.0
 custom_fonts/font = SubResource( 1 )
-text = "Welcome to my very first game !
-
-
-
-Move                     Left and Right
+text = "Move                     Left and Right
 Change color :   Up and Down
 Shoot                  Space"
 __meta__ = {
@@ -79,10 +74,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 146.276
-margin_top = 353.941
-margin_right = 688.276
-margin_bottom = 436.941
+margin_left = 141.0
+margin_top = 99.0
+margin_right = 683.0
+margin_bottom = 182.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[color=#FFE70F]C[/color][color=#FFD30F]o[/color][color=#FFC00F]l[/color][color=#FFAD10]o[/color][color=#FF9A10]r[/color] [color=#FF7311]S[/color][color=#FF6012]h[/color][color=#FF4D12]o[/color][color=#FF3A13]o[/color][color=#FF2713]t[/color]"
@@ -104,7 +99,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BraveRgmFegHbod" type="Sprite" parent="."]
-position = Vector2( 117.593, 104.334 )
-scale = Vector2( 0.231063, 0.231063 )
-texture = ExtResource( 6 )
+[node name="Version" type="Label" parent="."]
+margin_left = 749.0
+margin_top = 877.0
+margin_right = 789.0
+margin_bottom = 891.0
+text = "v 1.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}

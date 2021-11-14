@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/background.png" type="Texture" id=4]
 [ext_resource path="res://Environment/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Environment/Starfield.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Cubes/Cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Ship/Ship.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Screens/MainScene.gd" type="Script" id=8]
 [ext_resource path="res://Assets/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=9]
 
@@ -19,6 +19,7 @@ size = 30
 font_data = ExtResource( 9 )
 
 [node name="MainScene" type="Node2D"]
+position = Vector2( 1, 0 )
 script = ExtResource( 8 )
 
 [node name="S_Background" type="Sprite" parent="."]
@@ -29,7 +30,7 @@ texture = ExtResource( 4 )
 [node name="Starfield" parent="." instance=ExtResource( 6 )]
 position = Vector2( 400, 450 )
 
-[node name="Cube" parent="." instance=ExtResource( 7 )]
+[node name="Ship" parent="." instance=ExtResource( 7 )]
 position = Vector2( 386.681, 850 )
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
