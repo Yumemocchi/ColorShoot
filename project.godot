@@ -21,7 +21,7 @@ Global="*res://Global.tscn"
 
 [display]
 
-window/size/width=800
+window/size/width=1000
 window/size/height=900
 window/size/resizable=false
 window/size/always_on_top=true

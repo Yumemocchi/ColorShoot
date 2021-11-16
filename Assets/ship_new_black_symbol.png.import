@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/color_bullet-Sheet.png-126d80bb093a897ccc35d0b3d395f6d9.stex"
+path="res://.import/ship_new_black_symbol.png-9bf6f5267240deeeb256ba00252d2010.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/color_bullet-Sheet.png"
-dest_files=[ "res://.import/color_bullet-Sheet.png-126d80bb093a897ccc35d0b3d395f6d9.stex" ]
+source_file="res://Assets/ship_new_black_symbol.png"
+dest_files=[ "res://.import/ship_new_black_symbol.png-9bf6f5267240deeeb256ba00252d2010.stex" ]
 
 [params]
 

@@ -38,18 +38,22 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 800.0
-margin_bottom = 900.0
+margin_right = 1032.0
+margin_bottom = 950.0
 color = Color( 0.121569, 0.12549, 0.129412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 90.0
-margin_top = 430.0
-margin_right = 687.0
-margin_bottom = 522.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -298.5
+margin_top = -300.0
+margin_right = 298.5
+margin_bottom = -208.0
 custom_fonts/font = SubResource( 2 )
 text = "Press ENTER !"
 __meta__ = {
@@ -58,13 +62,13 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -310.0
-margin_top = -235.0
-margin_right = 306.0
-margin_bottom = -91.0
+anchor_bottom = 1.0
+margin_left = -308.0
+margin_top = -571.0
+margin_right = 308.0
+margin_bottom = -427.0
 custom_fonts/font = SubResource( 1 )
 text = "Move                     Left and Right
 Change color :   Up and Down
@@ -74,10 +78,12 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 141.0
-margin_top = 99.0
-margin_right = 683.0
-margin_bottom = 182.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -271.0
+margin_top = 161.0
+margin_right = 271.0
+margin_bottom = 244.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[color=#FFE70F]C[/color][color=#FFD30F]o[/color][color=#FFC00F]l[/color][color=#FFAD10]o[/color][color=#FF9A10]r[/color] [color=#FF7311]S[/color][color=#FF6012]h[/color][color=#FF4D12]o[/color][color=#FF3A13]o[/color][color=#FF2713]t[/color]"
@@ -100,10 +106,10 @@ __meta__ = {
 }
 
 [node name="Version" type="Label" parent="."]
-margin_left = 749.0
-margin_top = 877.0
-margin_right = 789.0
-margin_bottom = 891.0
+margin_left = 944.0
+margin_top = 880.0
+margin_right = 984.0
+margin_bottom = 894.0
 text = "v 1.1"
 __meta__ = {
 "_edit_use_anchors_": false

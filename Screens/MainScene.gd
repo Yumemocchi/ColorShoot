@@ -24,7 +24,8 @@ func pop_brick(x:int, place:int):
 	var brick = OBJ_BRICK.instance()
 	brick.position = Vector2(x-SIZE_BRICK/2,-200)
 	brick.place_in_tab = place
-	add_child(brick)
+	add_child_below_node($S_Background,brick)
+#	add_child(brick)
 
 func check_fire():
 	if (Input.is_action_pressed("ui_accept") and can_fire == true):
@@ -40,6 +41,7 @@ func check_fire():
 func _physics_process(delta):
 	check_fire()
 	check_tab_bricks()
+	check_current_color_cursor()
 	$L_Score.text = str(Global.score)
 	if Global.life == 0:
 		get_tree().change_scene("res://Screens/EndScreen.tscn")
@@ -48,7 +50,15 @@ func _physics_process(delta):
 		shake()
 		Global.shake_screen = false
 		
-
+func check_current_color_cursor():
+	if Global.current_color == Global.e_color.PINK:
+		$Cursor.position.y = Global.b_color.PINK
+	elif  Global.current_color == Global.e_color.BLUE:
+		$Cursor.position.y = Global.b_color.BLUE
+	elif  Global.current_color == Global.e_color.YELLOW:
+		$Cursor.position.y = Global.b_color.YELLOW
+	elif  Global.current_color == Global.e_color.GREEN :
+		$Cursor.position.y = Global.b_color.GREEN
 
 func shake():
 	print("shake")

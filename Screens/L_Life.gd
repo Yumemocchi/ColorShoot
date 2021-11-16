@@ -13,4 +13,4 @@ func _ready():
 
 
 func _process(delta):
-	text = "Lifes: "+str(Global.life)
+	text = str(Global.life)

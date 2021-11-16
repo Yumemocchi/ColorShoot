@@ -12,7 +12,7 @@ func _ready():
 	rng.randomize()
 	print(speed)
 	if Global.score < 10000:
-		speed = rng.randf_range(50.0, 100.0)
+		speed = rng.randf_range(25.0, 50.0)
 	elif Global.score >= 10000:
 		speed = rng.randf_range(150.0, 200.0)
 	color_brick = rng.randf_range(0, 4)

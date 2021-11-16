@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ship_new-Sheet.png-f39bc46ccfb5ec69f2ca2f1ede8c1d8e.stex"
+path="res://.import/little_icons-Sheet.png-6794600d30a0b72ca75aab654e8fa352.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ship_new-Sheet.png"
-dest_files=[ "res://.import/ship_new-Sheet.png-f39bc46ccfb5ec69f2ca2f1ede8c1d8e.stex" ]
+source_file="res://Assets/little_icons-Sheet.png"
+dest_files=[ "res://.import/little_icons-Sheet.png-6794600d30a0b72ca75aab654e8fa352.stex" ]
 
 [params]
 

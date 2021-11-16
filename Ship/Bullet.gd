@@ -1,6 +1,6 @@
 extends Area2D
 
-export var speed: float = 500
+export var speed: float = 800
 var velocity: Vector2 = Vector2.UP
 var rng = RandomNumberGenerator.new()
 var damages: int = 1

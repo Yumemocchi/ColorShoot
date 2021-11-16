@@ -12,4 +12,4 @@ func _ready():
 
 
 func _process(delta):
-	text = "Score : "+str(Global.score)
+	text = str(Global.score)

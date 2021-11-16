@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ship_new-Sheet.png-f39bc46ccfb5ec69f2ca2f1ede8c1d8e.stex"
+path="res://.import/brick_blue.png-5fae8bc72899df10c8f96340b4ec5486.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ship_new-Sheet.png"
-dest_files=[ "res://.import/ship_new-Sheet.png-f39bc46ccfb5ec69f2ca2f1ede8c1d8e.stex" ]
+source_file="res://Assets/brick_blue.png"
+dest_files=[ "res://.import/brick_blue.png-5fae8bc72899df10c8f96340b4ec5486.stex" ]
 
 [params]
 
