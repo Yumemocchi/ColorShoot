@@ -32,7 +32,7 @@ func check_fire():
 		can_fire = false		
 		var bullet = OBJ_BULLET.instance()
 		bullet.change_color_bullet(Global.current_color)
-		bullet.position = Vector2($Ship.position.x,$Ship.position.y-20)
+		bullet.position = Vector2($Ship.position.x,$Ship.position.y-60)
 		add_child_below_node($S_Background,bullet)
 		yield(get_tree().create_timer(0.2), "timeout")
 		can_fire = true
@@ -46,10 +46,14 @@ func _physics_process(delta):
 	if Global.life == 0:
 		get_tree().change_scene("res://Screens/EndScreen.tscn")
 	
+	
 	if Global.shake_screen == true:
 		shake()
 		Global.shake_screen = false
-		
+
+
+
+
 func check_current_color_cursor():
 	if Global.current_color == Global.e_color.PINK:
 		$Cursor.position.y = Global.b_color.PINK

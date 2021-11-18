@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/ship_new_black_symbol.png" type="Texture" id=1]
 [ext_resource path="res://Assets/reacteur.png" type="Texture" id=2]
@@ -31,7 +31,11 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47, 44.5734 )
 
-[node name="Ship" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 28.0
+height = 28.0
+
+[node name="Ship" type="KinematicBody2D" groups=["ship"]]
 collision_mask = 0
 script = ExtResource( 4 )
 
@@ -39,11 +43,13 @@ script = ExtResource( 4 )
 frames = SubResource( 6 )
 animation = "idle"
 
-[node name="React_left" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="ShipSprite"]
+
+[node name="React_left" type="Sprite" parent="ShipSprite/Sprite"]
 position = Vector2( -14, 24.5 )
 texture = ExtResource( 2 )
 
-[node name="React_right" type="Sprite" parent="."]
+[node name="React_right" type="Sprite" parent="ShipSprite/Sprite"]
 position = Vector2( 14, 24.5 )
 texture = ExtResource( 2 )
 
@@ -52,3 +58,13 @@ position = Vector2( -1.19209e-07, 0.426605 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="." groups=["ship"]]
+collision_layer = 32
+collision_mask = 4
+
+[node name="Hitbox_collision" type="CollisionShape2D" parent="Hitbox"]
+modulate = Color( 0.65098, 0.176471, 0.780392, 1 )
+position = Vector2( 0, 13 )
+rotation = 1.5708
+shape = SubResource( 11 )

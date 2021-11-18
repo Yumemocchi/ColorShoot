@@ -54,13 +54,13 @@ start={
 2d_render/layer_3="bullet"
 2d_render/layer_4="asteroid"
 2d_render/layer_5="laser"
-2d_render/layer_6="big_asteroid"
+2d_render/layer_6="hitbox_ship"
 2d_physics/layer_1="ship"
 2d_physics/layer_2="ennemy"
 2d_physics/layer_3="bullet"
 2d_physics/layer_4="asteroid"
 2d_physics/layer_5="laser"
-2d_physics/layer_6="big_asteroid"
+2d_physics/layer_6="hitbox_ship"
 
 [physics]
 

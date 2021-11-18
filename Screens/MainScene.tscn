@@ -161,4 +161,6 @@ texture = ExtResource( 13 )
 position = Vector2( 847, 818 )
 texture = ExtResource( 14 )
 
+[node name="Sprite" type="Sprite" parent="."]
+
 [connection signal="timeout" from="Camera2D/ShakeTimer" to="Camera2D" method="_on_Timer_timeout"]

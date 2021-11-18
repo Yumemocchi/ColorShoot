@@ -22,3 +22,12 @@ func play_game_over()-> void:
 
 func play_blop()-> void:
 	$snd_Blop.play()
+
+func play_ding_bounce()-> void:
+	$snd_Ding_Bounce.play()
+
+func play_hurt()-> void:
+	$snd_Hurt.play()
+
+func play_switch_ship()->void:
+	$snd_Switch_Ship.play()
