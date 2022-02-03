@@ -2,19 +2,18 @@ extends KinematicBody2D
 
 var speed: float = 0.0
 var velocity: Vector2 = Vector2.DOWN
-onready var health: int = 1
 var rng = RandomNumberGenerator.new()
 var place_in_tab: int = 0
 var color_brick: int = 3
+
+onready var health: int = 1
+const SCORE: Object = preload("res://Objects/Score.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	print(speed)
-	if Global.score < 10000:
-		speed = rng.randf_range(25.0, 50.0)
-	elif Global.score >= 10000:
-		speed = rng.randf_range(150.0, 200.0)
+	speed = rng.randf_range(Global.speed_range_from, Global.speed_range_to)
 	color_brick = rng.randf_range(0, 4)
 	$AnimatedSprite.stop()
 	$AnimatedSprite.frame = color_brick
@@ -49,5 +48,9 @@ func destroy():
 	Global.tab_bricks[place_in_tab] = 0
 	Global.score = Global.score + 100
 	Global.play_blop()
+	var _score = SCORE.instance()
+	add_child(_score)
+	_score.init(position, "100")
+	
 	queue_free()
 

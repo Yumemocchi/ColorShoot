@@ -11,7 +11,14 @@ var can_fire: bool = true
 var is_ast = false
 var rng = RandomNumberGenerator.new()
 
+onready var _score := $Labels/L_Score
+onready var _life := $Labels/L_Life
+onready var _speed_timer := $SpeedTimer
 
+
+
+func _ready():
+	_speed_timer.start()
 
 func check_tab_bricks():
 	for i in Global.tab_bricks.size():
@@ -37,20 +44,20 @@ func check_fire():
 		yield(get_tree().create_timer(0.2), "timeout")
 		can_fire = true
 
-		
+
 func _physics_process(delta):
 	check_fire()
 	check_tab_bricks()
 	check_current_color_cursor()
-	$L_Score.text = str(Global.score)
+	_score.text = str(Global.score)
+	_life.text = str(Global.life)
 	if Global.life == 0:
 		get_tree().change_scene("res://Screens/EndScreen.tscn")
-	
-	
+
+
 	if Global.shake_screen == true:
 		shake()
 		Global.shake_screen = false
-
 
 
 
@@ -69,3 +76,15 @@ func shake():
 	$Camera2D.set_physics_process(true)
 	# And start the timer, making the screen shake again.
 	$Camera2D._shake_timer.start() # Replace with function body.
+
+
+func _on_SpeedTimer_timeout():
+	Global.speed_range_from = Global.speed_range_from + 25.0
+	Global.speed_range_to = Global.speed_range_to + 25.0
+	var new_label = Label.new()
+	new_label.text = "speed up !!!"
+	add_child(new_label)
+	# lorsque le speed timer arrive au bout
+	# augmenter la vitesse de tombée des tuiles
+	# augmenter la vitesse de la musique
+	# afficher le  speed up à l'écran
